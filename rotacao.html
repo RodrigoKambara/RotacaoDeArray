@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotação de array</title>
+</head>
+<body>
+    <script>
+        var elm = prompt("Informe a quantidade de elementos no array");
+        var A = [];
+        for(let i=0; i< elm; i++) {
+            A[i] = prompt("Digite os elementos do array");
+        }
+        var K = prompt("Informe o número de rotações: ")
+
+        function rotacionarArray (A,K) {
+            let armazena = 0;
+            for (let i=0; i < K; i++) {
+                armazena = A[A.length - 1];
+                A.pop();
+                A.unshift(armazena)
+            }
+            console.log(A)
+        }
+        
+    </script>
+</body>
+</html>
